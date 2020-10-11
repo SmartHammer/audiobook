@@ -135,5 +135,15 @@ pip3 install PyPDF2
 pip3 install googletrans
 
 ## Tested
-wget https://ptgmedia.pearsoncmg.com/images/9780132350884/samplepages/9780132350884.pdf -O ~/Downloads
-./main.py bookName ~/Downloads/9780132350884.pdf --start 19 --end 23 --lang eo
+### Requirements
+sudo apt-get install python3-venv
+
+python3 -m venv audiobook-env
+source audiobook-env/bin/activate
+(audiobook-env)$ pip3 install pyttsx3 PyPDF2 goggletrans
+(audiobook-env)$ git clone https://github.com/ProgrammingHero1/audiobook.git
+(audiobook-env)$ wget https://ptgmedia.pearsoncmg.com/images/9780132350884/samplepages/9780132350884.pdf -O ~/Downloads
+(audiobook-env)$ cd audiobook
+(audiobook-env/audiobook)$ ./main.py bookName ~/Downloads/9780132350884.pdf --start 19 --end 23 --lang eo
+(audiobook-env/audiobook)$ deactivate
+
